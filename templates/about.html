@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">My name is Grigory Plakhotnikov, and I've made this simple web application as my final project for CS50x course. Feel free to contact me or leave any suggestions.</p>
+        <hr class="my-4">
+        <p>To build this web-based application and the web page, I used HTML, Bootstrap, CSS, Java Script, Python, SQL, and the following resources:</p>
+        <ul>
+          <li><a href="https://pillow.readthedocs.io/en/stable/reference/ImageFilter.html">Pillow (PIL Fork) library's filters</a>;</li>
+          <li><a href="https://scikit-image.org/docs/stable/auto_examples/filters/plot_nonlocal_means.html#sphx-glr-auto-examples-filters-plot-nonlocal-means-py/">Scikit-image algorithms for noise reduction</a>;</li>
+          <li><a href="https://www.freecodecamp.org/news/sketchify-turn-any-image-into-a-pencil-sketch-with-10-lines-of-code-cf67fa4f68ce/">Codecamp: How to turn any image into a pencil sketch with 10 lines of code</a>.</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="/contact" role="button">Contact me</a>
+    </div>
+{% endblock %}

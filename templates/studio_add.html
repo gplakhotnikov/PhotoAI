@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Studio
+{% endblock %}
+
+{% block main %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-5">Add an image</h1>
+
+    <p>   </p>
+    <form action="/studio" method="POST">
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" style= "width: 100%" name="URL" placeholder="http://" type="text" pattern="https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)(.jpg|.jpeg|.png|.gif)" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+
+	<p>   </p>
+	<p>   </p>
+	<p>   </p>
+		<div class="form-group">
+			<select class="form-control" name="symbol">
+				<option disabled value="">Add by uploading (not available)</option>
+				<option selected value="URL">Add by URL (default)</option>
+			</select>
+		</div>
+  </div>
+</div>
+
+{% endblock %}

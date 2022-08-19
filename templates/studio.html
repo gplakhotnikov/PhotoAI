@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Studio
+{% endblock %}
+
+{% block main %}
+
+    <img src="static/uploads/out.jpg" style="width: 60%">
+    <p> </p>
+    <h4>Apply a filter</h4>
+    <form id="form" action="/filter" method="POST" onsubmit="return show_spinner()">
+        <div class="form-group">
+            <select class="form-control" name="action" type="text">
+                <option value="sketch">Make a sketch</option>
+                <option value="noise">Delete digital noise</option>
+                <option value="color">Color correction</option>
+                <option disabled value="filters">Filters:</option>
+                <option selected value="blur">Blur</option>
+                <option value="contour">Contour</option>
+                <option value="detail">Detail</option>
+                <option value="edge_enhance">Edge Enhance (50%)</option>
+                <option value="edge_enhance_more">Edge Enhance (80%)</option>
+                <option value="emboss">Emboss</option>
+                <option value="find_edges">Find Edges</option>
+                <option value="sharpen">Sharpen</option>
+                <option value="smooth">Smooth (50%)</option>
+                <option value="smooth_more">Smooth (80%)</option>
+
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Apply</button>
+
+    </form>
+
+<div class="spinner-border m-5" role="status" id="spinner" aria-hidden="true">
+  <span class="sr-only">Loading...</span>
+</div>
+
+{% endblock %}

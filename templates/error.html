@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error
+{% endblock %}
+
+{% block main %}
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5">Something went wrong :(</h1>
+        <p class="lead">We are unable to process your request</p>
+      </div>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+        {{ string_out }}
+    </div>
+
+    <button type="button" class="btn btn-secondary" onclick="goBack()">Return</button>
+        <script>
+            function goBack() {
+                 window.history.back();
+            }
+        </script>
+    <button type="button" class="btn btn-primary" onclick="location.href='/';">Main Page</button>
+
+
+{% endblock %}

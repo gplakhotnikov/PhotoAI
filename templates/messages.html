@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Admin
+{% endblock %}
+
+{% block main %}
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-5">User messages</h1>
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in messages %}
+        <tr>
+            <td> {{ row['id'] }} </td>
+            <td> {{ row['name'] }} </td>
+            <td> {{ row['email'] }} </td>
+            <td> {{ row['message'] }} </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+{% endblock %}
